@@ -67,6 +67,6 @@ Generated data, logs, archives, environments, and Vina binaries are ignored by G
 
 ## Utilities and known limitations
 
-`utils/` provides paths, run management, Loguru configuration, OpenBabel preparation, molecular drawing, and the synthetic accessibility scorer. `notebooks_old/` preserves historical notebooks and is outside the current workflow.
+`utils/` provides paths, run management, Loguru configuration, OpenBabel preparation, and molecular drawing. `notebooks_old/` preserves historical notebooks and is outside the current workflow.
 
 OpenBabel resource paths are configured by `utils/babel.py`. Isolated magnesium ions retain Mg2+ charges without artificial hydrogens; other atoms receive Gasteiger charges. OpenBabel diagnostics are forwarded to the stage log. The current receptor still produces an aromatic bond perception warning; its bond typing requires inspection before interpreting docking results. Prepared PDBQT files passed a Vina compatibility check, which does not validate chemical typing or the full pipeline scientifically.
