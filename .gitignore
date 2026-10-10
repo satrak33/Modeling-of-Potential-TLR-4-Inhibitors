@@ -7,15 +7,16 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
-env/
-venv/
+.venv/
+/env/
+/venv/
 
-# Data
-data/
-*.csv
-*.sdf
-*.mol2
+# Generated data; preserve the original inputs for reproducibility
+/data/*
+!/data/raw/
+/data/raw/*
+!/data/raw/3FXI.pdb
+!/data/raw/curcumin.sdf
 
 # Jupyter
 .ipynb_checkpoints/
@@ -27,3 +28,21 @@ data/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local AutoDock Vina binaries
+tools/bin/
+
+# Local build dependencies and temporary outputs
+/tools/AutoDock-Vina/
+/tools/deps/
+/tools/build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local environment configuration
+.env
+.env.*
+!.env.example

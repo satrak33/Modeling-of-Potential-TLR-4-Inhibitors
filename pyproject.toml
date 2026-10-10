@@ -1,19 +1,20 @@
 [project]
-name = "chem"
+name = "docking"
 version = "0.1.0"
-description = "Add your description here"
+description = "Curcumin derivative generation, molecular profiling, and AutoDock Vina docking pipeline"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "admet-ai>=1.4.0",
+    "ipython>=8.0",
     "loguru>=0.7.3",
-    "matplotlib>=3.10.7",
-    "numpy<2",
-    "openbabel>=3.1.1.1",
-    "pathlib>=1.0.1",
-    "polars>=1.35.2",
-    "rdkit>=2025.9.1",
-    "requests>=2.32.5",
-    "setuptools>=80.9.0",
-    "tqdm>=4.67.1",
+    "openbabel>=3.2.1",
+    "pubchempy>=1.0.5",
+    "rdkit>=2026.3.6",
+    "tqdm>=4.70.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.0",
+    "jupyterlab>=4.0",
 ]
